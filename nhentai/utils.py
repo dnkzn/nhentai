@@ -199,11 +199,18 @@ and append a file extension like '.txt', so I avoid the potential of using
 an invalid filename.
 
 """
-    valid_chars = "-_.()[] %s%s" % (string.ascii_letters, string.digits)
+    valid_chars = "ǀ∕꞉？|/:?~'|#☆!@+-_.,()[]{} %s%s" % (string.ascii_letters, string.digits)
     filename = ''.join(c for c in s if c in valid_chars)
-    if len(filename) > 100:
-        filename = filename[:100] + '...]'
+    if len(filename) > 200:
+        filename = filename[:200] + '...]'
 
     # Remove [] from filename
     filename = filename.replace('[]', '')
+	# Replaces needed due to reserved characters
+    filename = filename.replace('|', 'ǀ')
+    filename = filename.replace('/', '∕')
+    filename = filename.replace(':', '꞉')
+    filename = filename.replace('?', '？')
+	# Remove '' around the string
+    filename = filename[1:-1]
     return filename
