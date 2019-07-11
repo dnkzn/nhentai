@@ -1,6 +1,9 @@
 nhentai
 =======
 
+Basically the same as the original but with support for more characters when it comes to naming: |/:?~'|#☆!@+{}
+Also the max filename length is increased to 200 (from 100) so it stops cutting the names off. Beware since the maximum path length in Windows is still 260 characters.
+
 .. code-block::
 
            _   _            _        _
