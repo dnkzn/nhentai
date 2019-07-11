@@ -93,6 +93,7 @@ Supported doujinshi folder formatter:
 - %s: Doujinshi subtitle (translated name)
 - %a: Doujinshi authors' name
 
+I recommend just using "--format '%t'".
 
 Other options:
 
